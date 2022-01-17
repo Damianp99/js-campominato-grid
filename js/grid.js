@@ -9,6 +9,22 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 // FUNCTIONS
 
+function createCells(min, max, cells) {
+    for (let i = 0; i < cells; i++) {
+        let div = document.createElement('div');
+        grid.appendChild(div);
+        div.classList = 'cell';
+        getRandomNumber(min, max);
+    }
+
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
 // CONST
 
 const levelSelection = document.getElementById('select')
@@ -21,13 +37,18 @@ const list = [];
 
 // quando scelgo la difficoltà creo la grid con i numeri
 
-select.addEventLsitener('click', function () {
+select.addEventListener('click', function () {
+
     const userChoice = levelSelection.value;
-    if (userChoice = 'difficulty1') {
+    if (userChoice === 'difficulty1') {
         // function
-    } else if (userChoice = 'difficulty1') {
+        createCells(difficulty1, 1, 100)
+        getRandomNumber()
+    } else if (userChoice === 'difficulty2') {
         // function
+        createCells(difficulty2, 1, 81)
     } else {
         // function
+        createCells(difficulty3, 1, 49)
     }
 })

@@ -1,0 +1,15 @@
+#grid{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cell{
+    height: 50px;
+    width: 50px;
+    color:black;
+    background-color: burlywood;
+    cursor: pointer;
+}
