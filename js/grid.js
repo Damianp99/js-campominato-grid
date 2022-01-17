@@ -7,5 +7,27 @@ con difficoltà 3 => tra 1 e 49
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 */
 
+// FUNCTIONS
 
+// CONST
 
+const levelSelection = document.getElementById('select')
+const grid = document.getElementById('grid')
+
+const difficulty1 = 100;
+const difficulty2 = 81;
+const difficulty3 = 49;
+const list = [];
+
+// quando scelgo la difficoltà creo la grid con i numeri
+
+select.addEventLsitener('click', function () {
+    const userChoice = levelSelection.value;
+    if (userChoice = 'difficulty1') {
+        // function
+    } else if (userChoice = 'difficulty1') {
+        // function
+    } else {
+        // function
+    }
+})
