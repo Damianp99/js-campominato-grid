@@ -15,6 +15,10 @@ function createCells(min, max, cells) {
         grid.appendChild(div);
         div.classList = 'cell';
         div.append(getRandomNumber(min, max, cells));
+
+        div.addEventListener('click', function () {
+            div.classList.toggle('clicked');
+        })
     }
 
 }
