@@ -53,10 +53,12 @@ start.addEventListener('click', function () {
     } else if (userChoice === 'difficulty2') {
         // function
         createCells(difficulty2, 1, 81)
+        grid.style.width = '400px'
         getRandomNumber()
     } else {
         // function
         createCells(difficulty3, 1, 49)
+        grid.style.width = '250px'
         getRandomNumber()
     }
 
