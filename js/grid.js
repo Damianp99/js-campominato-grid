@@ -49,6 +49,7 @@ start.addEventListener('click', function () {
     if (userChoice === 'difficulty1') {
         // function
         createCells(difficulty1, 1, 100)
+        grid.style.width = '500px'
         getRandomNumber()
     } else if (userChoice === 'difficulty2') {
         // function
