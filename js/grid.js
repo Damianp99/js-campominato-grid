@@ -14,7 +14,7 @@ function createCells(min, max, cells) {
         let div = document.createElement('div');
         grid.appendChild(div);
         div.classList = 'cell';
-        getRandomNumber(min, max);
+        div.append(getRandomNumber(min, max, cells));
     }
 
 }
@@ -26,7 +26,7 @@ function getRandomNumber(min, max) {
 
 
 // CONST
-
+const startLevel = document.getElementById('start')
 const levelSelection = document.getElementById('select')
 const grid = document.getElementById('grid')
 
@@ -37,7 +37,9 @@ const list = [];
 
 // quando scelgo la difficoltà creo la grid con i numeri
 
-select.addEventListener('click', function () {
+start.addEventListener('click', function () {
+    startLevel.innerHTML = 'Ricomincia!'
+    grid.innerHTML = '';
 
     const userChoice = levelSelection.value;
     if (userChoice === 'difficulty1') {
@@ -47,8 +49,11 @@ select.addEventListener('click', function () {
     } else if (userChoice === 'difficulty2') {
         // function
         createCells(difficulty2, 1, 81)
+        getRandomNumber()
     } else {
         // function
         createCells(difficulty3, 1, 49)
+        getRandomNumber()
     }
+
 })
